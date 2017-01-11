@@ -1,0 +1,142 @@
+digraph G {
+    edge [comment="Wildcard node added automatic in EG."];
+    node [comment="Wildcard node added automatic in EG.",
+          fontname="sans-serif"];
+          splines=ortho;
+          ranksep=0.5;
+    { 
+        node [shape=plaintext fontsize=28];
+        2002 -> 
+        2003 -> 
+        2007 -> 
+        2008 -> 
+        2009 -> 
+        2010 -> 
+        2011 -> 
+        2014 -> 
+        2015
+    } 
+    Friston2002BayesianEstimationOf -> Friston2003DynamicCausalModelling [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2007VariationalFreeEnergy -> Friston2008DEMAVariational [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2003DynamicCausalModelling -> Li2011GeneralisedFilteringAnd [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2003DynamicCausalModelling -> Friston2008DEMAVariational [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2003DynamicCausalModelling -> Friston2008VariationalFiltering [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2008DEMAVariational -> Friston2008VariationalFiltering [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2007VariationalFreeEnergy -> Friston2008VariationalFiltering [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2008DEMAVariational -> Friston2010GeneralisedFiltering [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2010GeneralisedFiltering -> Li2011GeneralisedFilteringAnd [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2010GeneralisedFiltering -> Razi2015ConstructValidationOf [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2008DEMAVariational -> Li2011GeneralisedFilteringAnd [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2008DEMAVariational -> Havlicek2011DynamicModelingOf [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2010GeneralisedFiltering -> Havlicek2011DynamicModelingOf [ weight=4, penwidth=3, color="#855D5D"]; 
+    Daunizeau2009VariationalBayesianIdentification -> Havlicek2011DynamicModelingOf [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2007VariationalFreeEnergy -> Daunizeau2009VariationalBayesianIdentification [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2014OnNodesAnd -> Friston2014ADCMFor [ weight=4, penwidth=3, color="#855D5D"]; 
+    Friston2014ADCMFor -> Razi2015ConstructValidationOf [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Friston2008DEMAVariational -> Friston2010GeneralisedFiltering [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Sengupta2015GradientbasedMCMCSamplers -> Sengupta2015GradientfreeMCMCMethods [ dir=none, style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    Sengupta2015GradientfreeMCMCMethods -> Razi2015ConstructValidationOf [ style=invis, weight=0.5]; 
+    subgraph cluster_legend { 
+        node [shape=plaintext]
+        label=legend;
+    	12239057 [style=invis] 
+    	12239057 -> Evaluated_in [ style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+		31048927 [style=invis] 
+	    31048927 -> Leads_to [ weight=4, penwidth=3, color="#855D5D"]; 
+    	29386573 [style=invis] 
+    	29386573 -> Linked [ dir=none, style=dotted, weight=2, penwidth=3, color="#855D5D"]; 
+    }
+
+Sengupta2015GradientbasedMCMCSamplers [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Sengupta2015</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Gradient-based MCMC Samplers For Dynamic<BR/>Causal Modelling<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000"><BR/></FONT></TD></TR> </TABLE>>];
+
+Daunizeau2009VariationalBayesianIdentification [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Daunizeau2009</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Variational Bayesian Identification And Prediction<BR/>Of Stochastic Nonlinear Dynamic Causal Models<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Use Laplace approximation<BR/>Enhance extended Kalman-Rauch filter by taking<BR/>uncertainty in the evolution parameters<BR/>Evaluate the instantaneous marginals time<BR/>point by time point<BR/>Forward pass provides fitering density which<BR/>can be used on-line<BR/>Back pass provides posterior density<BR/>Has a posterior density over the initial<BR/>conditions<BR/>Graph representation appears like RNN<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2008VariationalFiltering [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2008</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Variational Filtering<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">focus on stimating time varying system state<BR/>and input<BR/>Form a stochastic differential equation driven<BR/>by variational energy in generalized coordinates<BR/>with noise<BR/>A bunch of random initials (particles) are<BR/>drawn and involve follows the equations<BR/>The posterior distribution of states are<BR/>then estimated by the particle distribution<BR/>at each time step<BR/>NO Gaussian assumption on the states, although<BR/>assume Gaussian on noise<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2008DEMAVariational [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2008</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">DEM: A Variational Treatment Of Dynamic Systems<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Infer time varying system state, and time<BR/>invarying parameters and hyperparameters<BR/>Can be used online<BR/>use Gaussian assumption on all variables<BR/>system state is estimated per time point,<BR/>use generalised coordinate to take care the<BR/>dependency between time points. Mean field<BR/>assumption is used to coupling time derivertives<BR/>of different orders<BR/>Time invarying variables are estimated using<BR/>the whole signal sequency<BR/></FONT></TD></TR> </TABLE>>];
+
+Penny2010ComparingFamiliesOf [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Penny2010</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Comparing Families Of Dynamic Causal Models<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">“Previous applications in the biological<BR/>sciences have mainly focussed on model selection<BR/>in which one first selects the model with<BR/>the highest evidence and then makes inferences<BR/>based on the parameters of that model”<BR/>“family” based method to compare different<BR/>kinds of model instead of each individual<BR/>model<BR/>Family model evidence cannot be calculated<BR/>directly, it is the sum of individual model<BR/>in the family<BR/></FONT></TD></TR> </TABLE>>];
+
+Sengupta2015GradientfreeMCMCMethods [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Sengupta2015</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Gradient-free MCMC Methods For Dynamic Causal<BR/>Modelling<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000"><BR/></FONT></TD></TR> </TABLE>>];
+
+Havlicek2011DynamicModelingOf [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Havlicek2011</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Dynamic Modeling Of Neuronal Responses In<BR/>FMRI Using Cubature Kalman Filtering<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Based on state-of-the art Cubature Kalman<BR/>filtering<BR/>Estimate on input<BR/>Explicitly state: can handle rsfMRI<BR/>Time varying parameters<BR/>Forward and backward passes<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2007VariationalFreeEnergy [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2007</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Variational Free Energy And The Laplace Approximation<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Variational inference<BR/>Laplace approximation: local Gaussian approximation<BR/>of posterior around a MAP estimate. It's<BR/>suspectable, nothing more than assuming a<BR/>Gaussain q distribution<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2003DynamicCausalModelling [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2003</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Dynamic Causal Modelling<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">The original paper of DCM<BR/>Deterministic model, which means it doesn’t<BR/>consider fluctuation in the neural state<BR/>space<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2002BayesianEstimationOf [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2002</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Bayesian Estimation Of Dynamical Systems:<BR/>An Application To FMRI<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Introduce the Expectation Maximization (EM)<BR/>Gauss-Newton search method for DCM<BR/>E-step: solve for DCM parameters<BR/>M-step: solve for error covariance<BR/>Assumptions:<BR/>Global Gauss of parameters as prior<BR/>Local Gauss of parameters as posterior using<BR/>one order Taylor expansion<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2014ADCMFor [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2014</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">A DCM For Resting State FMRI<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Relation of DCM to a wide family of methods<BR/>Establishi face validity of spectrum DCM<BR/></FONT></TD></TR> </TABLE>>];
+
+Li2011GeneralisedFilteringAnd [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Li2011</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Generalised Filtering And Stochastic DCM<BR/>For FMRI<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Compare three kinds of DCM: deterministic<BR/>DCM, DEM, and GF<BR/>Face validity: simulated data<BR/>Construct validity: real data<BR/>state-noise has nontrivial amplitude and<BR/>smoothness; DEM and GF better than original<BR/>deterministic DCM<BR/>relaxing conditional independence assumptions<BR/>can better reveal group difference; GF better<BR/>than DEM<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2014OnNodesAnd [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2014</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">On Nodes And Modes In Resting State FMRI<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Introduction of Spectral DCM for rsfMRI<BR/>DCM generative model in frequence domain<BR/>Can be solved by any previous mathod<BR/>Constrainted to symmetric connection matrix<BR/>Functional connection eigenmodes are the<BR/>same as effective connectivity, provided<BR/>symmetrical connections<BR/></FONT></TD></TR> </TABLE>>];
+
+Friston2010GeneralisedFiltering [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Friston2010</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Generalised Filtering<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Laplace approximation<BR/>No mean field assumption means no independent<BR/>assumption between system states, parameters,<BR/>and hyperparameters<BR/>Online and real time deconvolution<BR/>Absorb originally time invariant parameters<BR/>and hyperparameters in to the system states<BR/>Put low motion prior on parameters and hyperparameters,<BR/>their mariginal distributions coverge slowly<BR/>variational filtering and DEM outperform<BR/>extended Kalman filtering and Particle filtering<BR/>(provided posterior is unimodal)<BR/></FONT></TD></TR> </TABLE>>];
+
+Razi2015ConstructValidationOf [color="#855D5D", shape=record, margin=0, label=< <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" > <TR><TD COLSPAN="5" BGCOLOR="#9B2D1F"><FONT COLOR="#FFFFFF">Razi2015</FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#EFE7E7" ><FONT COLOR="#000000">Construct Validation Of A DCM For Resting<BR/>State FMRI<BR/></FONT></TD></TR> <TR><TD COLSPAN="5" BGCOLOR="#FFFFFF" ><FONT COLOR="#000000">Compare two kinds of DCM for rsfMRI: generalised<BR/>filtering and spDCM<BR/>SpDCM is more accurate and more sensitive<BR/>to group differences<BR/></FONT></TD></TR> </TABLE>>];
+
+    { rank = same;
+        2002;
+         Friston2002BayesianEstimationOf;
+    }
+
+    { rank = same;
+        2003;
+         Friston2003DynamicCausalModelling;
+    }
+
+    { rank = same;
+        2007;
+         Friston2007VariationalFreeEnergy;
+    }
+
+    { rank = same;
+        2008;
+         Friston2008VariationalFiltering;
+         Friston2008DEMAVariational;
+    }
+
+    { rank = same;
+        2009;
+         Daunizeau2009VariationalBayesianIdentification;
+    }
+
+    { rank = same;
+        2010;
+         Penny2010ComparingFamiliesOf;
+         Friston2010GeneralisedFiltering;
+    }
+
+    { rank = same;
+        2011;
+         Havlicek2011DynamicModelingOf;
+         Li2011GeneralisedFilteringAnd;
+    }
+
+    { rank = same;
+        2014;
+         Friston2014ADCMFor;
+         Friston2014OnNodesAnd;
+    }
+
+    { rank = same;
+        2015;
+        Sengupta2015GradientbasedMCMCSamplers;
+         Sengupta2015GradientfreeMCMCMethods;
+         Razi2015ConstructValidationOf;
+    }
+    subgraph DCM_Enhancemen { 
+        node [style=invis]
+        edge [style=invis]
+    }
+    subgraph DCM_Inference { 
+        node [style=invis]
+        edge [style=invis]
+    }
+    subgraph DCM_Model_Selection { 
+        node [style=invis]
+        edge [style=invis]
+    }
+}

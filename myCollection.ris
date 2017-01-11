@@ -1,0 +1,454 @@
+TY  - JOUR
+T1  - Gradient-based MCMC samplers for dynamic causal modelling
+A1  - Sengupta, Biswa
+A1  - Friston, Karl J.
+A1  - Penny, Will D.
+Y1  - 2015///
+PB  - Elsevier B.V.
+JF  - NeuroImage
+VL  - 125
+SP  - 1107
+EP  - 1118
+SN  - 1095-9572 (Electronic)\r1053-8119 (Linking)
+DO  - 10.1016/j.neuroimage.2015.07.043
+UR  - http://dx.doi.org/10.1016/j.neuroimage.2015.07.043
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Sengupta, Friston, Penny/NeuroImage/Sengupta, Friston, Penny - 2015 - Gradient-based MCMC samplers for dynamic causal modelling.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+N2  - In this technical note, we derive two MCMC (Markov chain Monte Carlo) samplers for dynamic causal models (DCMs). Specifically, we use (a) Hamiltonian MCMC (HMC-E) where sampling is simulated using Hamilton's equation of motion and (b) Langevin Monte Carlo algorithm (LMC-R and LMC-E) that simulates the Langevin diffusion of samples using gradients either on a Euclidean (E) or on a Riemannian (R) manifold. While LMC-R requires minimal tuning, the implementation of HMC-E is heavily dependent on its tuning parameters. These parameters are therefore optimised by learning a Gaussian process model of the time-normalised sample correlation matrix. This allows one to formulate an objective function that balances tuning parameter exploration and exploitation, furnishing an intervention-free inference scheme. Using neural mass models (NMMs)-a class of biophysically motivated DCMs-we find that HMC-E is statistically more efficient than LMC-R (with a Riemannian metric); yet both gradient-based samplers are far superior to the random walk Metropolis algorithm, which proves inadequate to steer away from dynamical instability.
+ER  - 
+TY  - JOUR
+T1  - Variational Bayesian identification and prediction of stochastic nonlinear dynamic causal models
+A1  - Daunizeau, J.
+A1  - Friston, K. J.
+A1  - Kiebel, S. J.
+Y1  - 2009///
+KW  - Approximate inference
+KW  - DCM
+KW  - EM
+KW  - Free-energy
+KW  - Kalman filter
+KW  - Laplace approximation
+KW  - Model comparison
+KW  - Nonlinear state-space models
+KW  - Nonlinear stochastic dynamical systems
+KW  - Rauch smoother
+KW  - SDE
+KW  - Variational Bayes
+PB  - Elsevier B.V.
+JF  - Physica D: Nonlinear Phenomena
+VL  - 238
+IS  - 21
+SP  - 2089
+EP  - 2118
+SN  - 0167-2789
+DO  - 10.1016/j.physd.2009.08.002
+UR  - http://dx.doi.org/10.1016/j.physd.2009.08.002
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Daunizeau, Friston, Kiebel/Physica D Nonlinear Phenomena/Daunizeau, Friston, Kiebel - 2009 - Variational Bayesian identification and prediction of stochastic nonlinear dynamic causal models.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Use Laplace approximation
+Enhance extended Kalman-Rauch filter by taking uncertainty in the evolution parameters
+Evaluate the instantaneous marginals time point by time point
+Forward pass provides fitering density which can be used on-line
+Back pass provides posterior density
+Has a posterior density over the initial conditions
+Graph representation appears like RNN
+&lt;/NO&gt;
+N2  - In this paper, we describe a general variational Bayesian approach for approximate inference on nonlinear stochastic dynamic models. This scheme extends established approximate inference on hidden-states to cover: (i) nonlinear evolution and observation functions, (ii) unknown parameters and (precision) hyperparameters and (iii) model comparison and prediction under uncertainty. Model identification or inversion entails the estimation of the marginal likelihood or evidence of a model. This difficult integration problem can be finessed by optimising a free-energy bound on the evidence using results from variational calculus. This yields a deterministic update scheme that optimises an approximation to the posterior density on the unknown model variables. We derive such a variational Bayesian scheme in the context of nonlinear stochastic dynamic hierarchical models, for both model identification and time-series prediction. The computational complexity of the scheme is comparable to that of an extended Kalman filter, which is critical when inverting high dimensional models or long time-series. Using Monte-Carlo simulations, we assess the estimation efficiency of this variational Bayesian approach using three stochastic variants of chaotic dynamic systems. We also demonstrate the model comparison capabilities of the method, its self-consistency and its predictive power. ?? 2009 Elsevier B.V.
+ER  - 
+TY  - JOUR
+T1  - Variational filtering
+A1  - Friston, K. J.
+Y1  - 2008///
+KW  - Action
+KW  - Bayesian filtering
+KW  - Dynamic expectation maximisation
+KW  - Dynamical systems
+KW  - Free-energy
+KW  - Generalised coordinates
+KW  - Nonlinear
+KW  - Variational Bayes
+KW  - Variational filtering
+JF  - NeuroImage
+VL  - 41
+IS  - 3
+SP  - 747
+EP  - 766
+SN  - 1053-8119 (Print)
+DO  - 10.1016/j.neuroimage.2008.03.017
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston/NeuroImage/Friston - 2008 - Variational filtering.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+focus on stimating time varying system state and input
+Form a stochastic differential equation driven by variational energy in generalized coordinates with noise
+A bunch of random initials (particles) are drawn and involve follows the equations
+The posterior distribution of states are then estimated by the particle distribution at each time step
+NO Gaussian assumption on the states, although assume Gaussian on noise
+&lt;/NO&gt;
+N2  - This note presents a simple Bayesian filtering scheme, using variational calculus, for inference on the hidden states of dynamic systems. Variational filtering is a stochastic scheme that propagates particles over a changing variational energy landscape, such that their sample density approximates the conditional density of hidden and states and inputs. The key innovation, on which variational filtering rests, is a formulation in generalised coordinates of motion. This renders the scheme much simpler and more versatile than existing approaches, such as those based on particle filtering. We demonstrate variational filtering using simulated and real data from hemodynamic systems studied in neuroimaging and provide comparative evaluations using particle filtering and the fixed-form homologue of variational filtering, namely dynamic expectation maximisation. ?? 2008 Elsevier Inc. All rights reserved.
+ER  - 
+TY  - JOUR
+T1  - DEM: A variational treatment of dynamic systems
+A1  - Friston, K. J.
+A1  - Trujillo-Barreto, N.
+A1  - Daunizeau, J.
+Y1  - 2008///
+KW  - Action
+KW  - Bayesian filtering
+KW  - Dynamic expectation maximisation
+KW  - Dynamical systems
+KW  - Free energy
+KW  - Nonlinear
+KW  - Variational Bayes
+KW  - Variational filtering
+JF  - NeuroImage
+VL  - 41
+IS  - 3
+SP  - 849
+EP  - 885
+SN  - 1053-8119 (Print)
+DO  - 10.1016/j.neuroimage.2008.02.054
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston, Trujillo-Barreto, Daunizeau/NeuroImage/Friston, Trujillo-Barreto, Daunizeau - 2008 - DEM A variational treatment of dynamic systems.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Infer time varying system state, and time invarying parameters and hyperparameters
+Can be used online
+use Gaussian assumption on all variables
+system state is estimated per time point, use generalised coordinate to take care the dependency between time points. Mean field assumption is used to coupling time derivertives of different orders
+Time invarying variables are estimated using the whole signal sequency 
+&lt;/NO&gt;
+N2  - This paper presents a variational treatment of dynamic models that furnishes time-dependent conditional densities on the path or trajectory of a system's states and the time-independent densities of its parameters. These are obtained by maximising a variational action with respect to conditional densities, under a fixed-form assumption about their form. The action or path-integral of free-energy represents a lower bound on the model's log-evidence or marginal likelihood required for model selection and averaging. This approach rests on formulating the optimisation dynamically, in generalised coordinates of motion. The resulting scheme can be used for online Bayesian inversion of nonlinear dynamic causal models and is shown to outperform existing approaches, such as Kalman and particle filtering. Furthermore, it provides for dual and triple inferences on a system's states, parameters and hyperparameters using exactly the same principles. We refer to this approach as dynamic expectation maximisation (DEM). ?? 2008 Elsevier Inc. All rights reserved.
+ER  - 
+TY  - JOUR
+T1  - Comparing families of dynamic causal models
+A1  - Penny, Will D.
+A1  - Stephan, Klaas E.
+A1  - Daunizeau, Jean
+A1  - Rosa, Maria J.
+A1  - Friston, Karl J.
+A1  - Schofield, Thomas M.
+A1  - Leff, Alex P.
+Y1  - 2010///
+JF  - PLoS Computational Biology
+VL  - 6
+IS  - 3
+SN  - 1553-7358 (Electronic)\r1553-734X (Linking)
+DO  - 10.1371/journal.pcbi.1000709
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Penny et al/PLoS Computational Biology/Penny et al. - 2010 - Comparing families of dynamic causal models.PDF
+N1  - &lt;SG&gt;DCM Model_Selection&lt;/SG&gt;
+&lt;NO&gt;
+“Previous applications in the biological sciences have mainly focussed on model selection in which one first selects the model with the highest evidence and then makes inferences based on the parameters of that model”
+“family” based method to compare different kinds of model instead of each individual model
+Family model evidence cannot be calculated directly, it is the sum of individual model in the family
+&lt;/NO&gt;
+N2  - Mathematical models of scientific data can be formally compared using Bayesian model evidence. Previous applications in the biological sciences have mainly focussed on model selection in which one first selects the model with the highest evidence and then makes inferences based on the parameters of that model. This "best model" approach is very useful but can become brittle if there are a large number of models to compare, and if different subjects use different models. To overcome this shortcoming we propose the combination of two further approaches: (i) family level inference and (ii) Bayesian model averaging within families. Family level inference removes uncertainty about aspects of model structure other than the characteristic of interest. For example: What are the inputs to the system? Is processing serial or parallel? Is it linear or nonlinear? Is it mediated by a single, crucial connection? We apply Bayesian model averaging within families to provide inferences about parameters that are independent of further assumptions about model structure. We illustrate the methods using Dynamic Causal Models of brain imaging data.
+ER  - 
+TY  - JOUR
+T1  - Gradient-free MCMC methods for dynamic causal modelling
+A1  - Sengupta, Biswa
+A1  - Friston, Karl J.
+A1  - Penny, Will D.
+Y1  - 2015///
+PB  - The Authors
+JF  - NeuroImage
+VL  - 112
+SP  - 375
+EP  - 381
+SN  - 1053-8119
+DO  - 10.1016/j.neuroimage.2015.03.008
+UR  - http://dx.doi.org/10.1016/j.neuroimage.2015.03.008
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Sengupta, Friston, Penny/NeuroImage/Sengupta, Friston, Penny - 2015 - Gradient-free MCMC methods for dynamic causal modelling.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+N2  - In this technical note we compare the performance of four gradient-free MCMC samplers (random walk Metropolis sampling, slice-sampling, adaptive MCMC sampling and population-based MCMC sampling with tempering) in terms of the number of independent samples they can produce per unit computational time. For the Bayesian inversion of a single-node neural mass model, both adaptive and population-based samplers are more efficient compared with random walk Metropolis sampler or slice-sampling; yet adaptive MCMC sampling is more promising in terms of compute time. Slice-sampling yields the highest number of independent samples from the target density - albeit at almost 1000% increase in computational time, in comparison to the most efficient algorithm (i.e., the adaptive MCMC sampler).
+ER  - 
+TY  - JOUR
+T1  - Dynamic modeling of neuronal responses in fMRI using cubature Kalman filtering
+A1  - Havlicek, Martin
+A1  - Friston, Karl J.
+A1  - Jan, Jiri
+A1  - Brazdil, Milan
+A1  - Calhoun, Vince D.
+A1  - Martin Havlicek, Karl Firston, Jiri jan
+Y1  - 2011///
+KW  - Blind deconvolution
+KW  - Cubature Kalman filter
+KW  - Dynamic expectation maximization
+KW  - FMRI
+KW  - Hemodynamic modeling
+KW  - Neuronal
+KW  - Nonlinear
+KW  - Smoother
+KW  - Stochastic
+JF  - NeuroImage
+VL  - 56
+IS  - 4
+SP  - 2109
+EP  - 2128
+SN  - 1053-8119
+DO  - 10.1016/j.neuroimage.2011.03.005
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Havlicek et al/NeuroImage/Havlicek et al. - 2011 - Dynamic modeling of neuronal responses in fMRI using cubature Kalman filtering.pdf
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Havlicek et al/NeuroImage/Havlicek et al. - 2011 - Dynamic modeling of neuronal responses in fMRI using cubature Kalman filtering(2).pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Based on state-of-the art Cubature Kalman filtering
+Estimate on input
+Explicitly state: can handle rsfMRI
+Time varying parameters
+Forward and backward passes
+&lt;/NO&gt;
+N2  - This paper presents a new approach to inverting (fitting) models of coupled dynamical systems based on state-of-the-art (cubature) Kalman filtering. Crucially, this inversion furnishes posterior estimates of both the hidden states and parameters of a system, including any unknown exogenous input. Because the underlying generative model is formulated in continuous time (with a discrete observation process) it can be applied to a wide variety of models specified with either ordinary or stochastic differential equations. These are an important class of models that are particularly appropriate for biological time-series, where the underlying system is specified in terms of kinetics or dynamics (i.e., dynamic causal models). We provide comparative evaluations with generalized Bayesian filtering (dynamic expectation maximization) and demonstrate marked improvements in accuracy and computational efficiency. We compare the schemes using a series of difficult (nonlinear) toy examples and conclude with a special focus on hemodynamic models of evoked brain responses in fMRI. Our scheme promises to provide a significant advance in characterizing the functional architectures of distributed neuronal systems, even in the absence of known exogenous (experimental) input; e.g., resting state fMRI studies and spontaneous fluctuations in electrophysiological studies. Importantly, unlike current Bayesian filters (e.g. DEM), our scheme provides estimates of time-varying parameters, which we will exploit in future work on the adaptation and enabling of connections in the brain. ?? 2011 Elsevier Inc.
+ER  - 
+TY  - JOUR
+T1  - Variational free energy and the Laplace approximation
+A1  - Friston, Karl
+A1  - Mattout, J??r??mie
+A1  - Trujillo-Barreto, Nelson
+A1  - Ashburner, John
+A1  - Penny, Will
+Y1  - 2007///
+KW  - Automatic relevance determination
+KW  - Expectation maximisation
+KW  - Free energy
+KW  - Model selection
+KW  - Relevance vector machines
+KW  - Restricted maximum likelihood
+KW  - Variational Bayes
+JF  - NeuroImage
+VL  - 34
+IS  - 1
+SP  - 220
+EP  - 234
+SN  - 1053-8119 (Print)\n1053-8119 (Linking)
+DO  - 10.1016/j.neuroimage.2006.08.035
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston et al/NeuroImage/Friston et al. - 2007 - Variational free energy and the Laplace approximation.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Variational inference 
+Laplace approximation: local Gaussian approximation of posterior around a MAP estimate. It's suspectable, nothing more than assuming a Gaussain q distribution
+&lt;/NO&gt;
+N2  - This note derives the variational free energy under the Laplace approximation, with a focus on accounting for additional model complexity induced by increasing the number of model parameters. This is relevant when using the free energy as an approximation to the log-evidence in Bayesian model averaging and selection. By setting restricted maximum likelihood (ReML) in the larger context of variational learning and expectation maximisation (EM), we show how the ReML objective function can be adjusted to provide an approximation to the log-evidence for a particular model. This means ReML can be used for model selection, specifically to select or compare models with different covariance components. This is useful in the context of hierarchical models because it enables a principled selection of priors that, under simple hyperpriors, can be used for automatic model selection and relevance determination (ARD). Deriving the ReML objective function, from basic variational principles, discloses the simple relationships among Variational Bayes, EM and ReML. Furthermore, we show that EM is formally identical to a full variational treatment when the precisions are linear in the hyperparameters. Finally, we also consider, briefly, dynamic models and how these inform the regularisation of free energy ascent schemes, like EM and ReML. ?? 2006 Elsevier Inc. All rights reserved.
+ER  - 
+TY  - JOUR
+T1  - Dynamic causal modelling
+A1  - Friston, K. J.
+A1  - Harrison, L.
+A1  - Penny, W.
+Y1  - 2003///
+KW  - Bilinear model
+KW  - Effective connectivity
+KW  - Functional neuroimaging
+KW  - Hemodynamic response function
+KW  - Nonlinear system identification
+KW  - fMRI
+JF  - NeuroImage
+VL  - 19
+IS  - 4
+SP  - 1273
+EP  - 1302
+SN  - 9780122648410
+DO  - 10.1016/S1053-8119(03)00202-7
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston, Harrison, Penny/NeuroImage/Friston, Harrison, Penny - 2003 - Dynamic causal modelling.pdf
+N1  - &lt;SG&gt;DCM Inference | DCM Enhancement | DCM Model_Selection&lt;/SG&gt;
+&lt;RA&gt;high&lt;/RA&gt;
+&lt;TY&gt;review&lt;/TY&gt;
+&lt;NO&gt;
+The original paper of DCM
+Deterministic model, which means it doesn’t consider fluctuation in the neural state space
+&lt;/NO&gt;
+N2  - In this paper we present an approach to the identification of nonlinear input-state-output systems. By using a bilinear approximation to the dynamics of interactions among states, the parameters of the implicit causal model reduce to three sets. These comprise (1) parameters that mediate the influence of extrinsic inputs on the states, (2) parameters that mediate intrinsic coupling among the states, and (3) [bilinear] parameters that allow the inputs to modulate that coupling. Identification proceeds in a Bayesian framework given known, deterministic inputs and the observed responses of the system. We developed this approach for the analysis of effective connectivity using experimentally designed inputs and fMRI responses. In this context, the coupling parameters correspond to effective connectivity and the bilinear parameters reflect the changes in connectivity induced by inputs. The ensuing framework allows one to characterise fMRI experiments, conceptually, as an experimental manipulation of integration among brain regions (by contextual or trial-free inputs, like time or attentional set) that is revealed using evoked responses (to perturbations or trial-bound inputs, like stimuli). As with previous analyses of effective connectivity, the focus is on experimentally induced changes in coupling (cf., psychophysiologic interactions). However, unlike previous approaches in neuroimaging, the causal model ascribes responses to designed deterministic inputs, as opposed to treating inputs as unknown and stochastic. ?? 2003 Elsevier Science (USA). All rights reserved.
+ER  - 
+TY  - JOUR
+T1  - Bayesian Estimation of Dynamical Systems: An Application to fMRI
+A1  - Friston, K.J.
+Y1  - 2002///
+KW  - bayesian inference
+KW  - em algorithm
+KW  - fmri
+KW  - gauss
+KW  - hemodynamics
+KW  - model identification
+KW  - namics
+KW  - newton method
+KW  - nonlinear dy-
+KW  - series
+KW  - volterra
+JF  - NeuroImage
+VL  - 16
+IS  - 2
+SP  - 513
+EP  - 530
+SN  - 1053-8119 (Print)
+DO  - 10.1006/nimg.2001.1044
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston/NeuroImage/Friston - 2002 - Bayesian Estimation of Dynamical Systems An Application to fMRI.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Introduce the Expectation Maximization (EM) Gauss-Newton search method for DCM
+E-step: solve for DCM parameters
+M-step: solve for error covariance
+Assumptions: 
+Global Gauss of parameters as prior
+Local Gauss of parameters as posterior using one order Taylor expansion
+&lt;/NO&gt;
+ER  - 
+TY  - JOUR
+T1  - A DCM for resting state fMRI
+A1  - Friston, Karl J.
+A1  - Kahan, Joshua
+A1  - Biswal, Bharat
+A1  - Razi, Adeel
+Y1  - 2014///
+KW  - Bayesian
+KW  - Dynamic causal modelling
+KW  - Effective connectivity
+KW  - FMRI
+KW  - Functional connectivity
+KW  - Graph
+KW  - Resting state
+PB  - The Authors
+JF  - NeuroImage
+VL  - 94
+SP  - 396
+EP  - 407
+SN  - 1095-9572 (Electronic)\r1053-8119 (Linking)
+DO  - 10.1016/j.neuroimage.2013.12.009
+UR  - http://dx.doi.org/10.1016/j.neuroimage.2013.12.009
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston et al/NeuroImage/Friston et al. - 2014 - A DCM for resting state fMRI.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;RA&gt;high&lt;/RA&gt;
+&lt;NO&gt;
+Relation of DCM to a wide family of methods
+Establishi face validity of spectrum DCM
+&lt;/NO&gt;
+N2  - This technical note introduces a dynamic causal model (DCM) for resting state fMRI time series based upon observed functional connectivity-as measured by the cross spectra among different brain regions. This DCM is based upon a deterministic model that generates predicted crossed spectra from a biophysically plausible model of coupled neuronal fluctuations in a distributed neuronal network or graph. Effectively, the resulting scheme finds the best effective connectivity among hidden neuronal states that explains the observed functional connectivity among haemodynamic responses. This is because the cross spectra contain all the information about (second order) statistical dependencies among regional dynamics. In this note, we focus on describing the model, its relationship to existing measures of directed and undirected functional connectivity and establishing its face validity using simulations. In subsequent papers, we will evaluate its construct validity in relation to stochastic DCM and its predictive validity in Parkinson's and Huntington's disease. ?? 2013 The Authors.
+ER  - 
+TY  - JOUR
+T1  - Generalised filtering and stochastic DCM for fMRI
+A1  - Li, Baojuan
+A1  - Daunizeau, Jean
+A1  - Stephan, Klaas E.
+A1  - Penny, Will
+A1  - Hu, Dewen
+A1  - Friston, Karl
+Y1  - 2011///
+KW  - Bayesian
+KW  - Dynamic causal modelling
+KW  - Dynamic expectation maximisation
+KW  - FMRI
+KW  - Filtering
+KW  - Free energy
+KW  - Neuronal
+KW  - Random differential equations
+PB  - Elsevier B.V.
+JF  - NeuroImage
+VL  - 58
+IS  - 2
+SP  - 442
+EP  - 457
+SN  - 1095-9572 (Electronic)$\$r1053-8119 (Linking)
+DO  - 10.1016/j.neuroimage.2011.01.085
+UR  - http://dx.doi.org/10.1016/j.neuroimage.2011.01.085
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Li et al/NeuroImage/Li et al. - 2011 - Generalised filtering and stochastic DCM for fMRI.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;TY&gt;evaluation&lt;/TY&gt;
+&lt;RA&gt;high&lt;/RA&gt;
+&lt;NO&gt;
+Compare three kinds of DCM: deterministic DCM, DEM, and GF
+Face validity: simulated data
+Construct validity: real data
+state-noise has nontrivial amplitude and smoothness; DEM and GF better than original deterministic DCM
+relaxing conditional independence assumptions can better reveal group difference; GF better than DEM
+&lt;/NO&gt;
+N2  - This paper is about the fitting or inversion of dynamic causal models (DCMs) of fMRI time series. It tries to establish the validity of stochastic DCMs that accommodate random fluctuations in hidden neuronal and physiological states. We compare and contrast deterministic and stochastic DCMs, which do and do not ignore random fluctuations or noise on hidden states. We then compare stochastic DCMs, which do and do not ignore conditional dependence between hidden states and model parameters (generalised filtering and dynamic expectation maximisation, respectively). We first characterise state-noise by comparing the log evidence of models with different a priori assumptions about its amplitude, form and smoothness. Face validity of the inversion scheme is then established using data simulated with and without state-noise to ensure that DCM can identify the parameters and model that generated the data. Finally, we address construct validity using real data from an fMRI study of internet addiction. Our analyses suggest the following. (i) The inversion of stochastic causal models is feasible, given typical fMRI data. (ii) State-noise has nontrivial amplitude and smoothness. (iii) Stochastic DCM has face validity, in the sense that Bayesian model comparison can distinguish between data that have been generated with high and low levels of physiological noise and model inversion provides veridical estimates of effective connectivity. (iv) Relaxing conditional independence assumptions can have greater construct validity, in terms of revealing group differences not disclosed by variational schemes. Finally, we note that the ability to model endogenous or random fluctuations on hidden neuronal (and physiological) states provides a new and possibly more plausible perspective on how regionally specific signals in fMRI are generated. ?? 2011.
+ER  - 
+TY  - JOUR
+T1  - On nodes and modes in resting state fMRI
+A1  - Friston, Karl J.
+A1  - Kahan, Joshua
+A1  - Razi, Adeel
+A1  - Stephan, Klaas Enno
+A1  - Sporns, Olaf
+Y1  - 2014///
+KW  - Bayesian
+KW  - Criticality
+KW  - Dynamic causal modelling
+KW  - Effective connectivity
+KW  - FMRI
+KW  - Free energy
+KW  - Functional connectivity
+KW  - Lyapunov exponents
+KW  - Proximity graph
+KW  - Resting state
+KW  - Self-organisation
+PB  - Elsevier B.V.
+JF  - NeuroImage
+VL  - 99
+SP  - 533
+EP  - 547
+SN  - 1095-9572 (Electronic)$\$r1053-8119 (Linking)
+DO  - 10.1016/j.neuroimage.2014.05.056
+UR  - http://dx.doi.org/10.1016/j.neuroimage.2014.05.056
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston et al/NeuroImage/Friston et al. - 2014 - On nodes and modes in resting state fMRI.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Introduction of Spectral DCM for rsfMRI
+DCM generative model in frequence domain
+Can be solved by any previous mathod
+Constrainted to symmetric connection matrix
+Functional connection eigenmodes are the same as effective connectivity, provided symmetrical connections
+&lt;/NO&gt;
+N2  - This paper examines intrinsic brain networks in light of recent developments in the characterisation of resting state fMRI timeseries - and simulations of neuronal fluctuations based upon the connectome. Its particular focus is on patterns or modes of distributed activity that underlie functional connectivity. We first demonstrate that the eigenmodes of functional connectivity - or covariance among regions or nodes - are the same as the eigenmodes of the underlying effective connectivity, provided we limit ourselves to symmetrical connections. This symmetry constraint is motivated by appealing to proximity graphs based upon multidimensional scaling. Crucially, the principal modes of functional connectivity correspond to the dynamically unstable modes of effective connectivity that decay slowly and show long term memory. Technically, these modes have small negative Lyapunov exponents that approach zero from below. Interestingly, the superposition of modes - whose exponents are sampled from a power law distribution - produces classical 1/. f (scale free) spectra. We conjecture that the emergence of dynamical instability - that underlies intrinsic brain networks - is inevitable in any system that is separated from external states by a Markov blanket. This conjecture appeals to a free energy formulation of nonequilibrium steady-state dynamics. The common theme that emerges from these theoretical considerations is that endogenous fluctuations are dominated by a small number of dynamically unstable modes. We use this as the basis of a dynamic causal model (DCM) of resting state fluctuations - as measured in terms of their complex cross spectra. In this model, effective connectivity is parameterised in terms of eigenmodes and their Lyapunov exponents - that can also be interpreted as locations in a multidimensional scaling space. Model inversion provides not only estimates of edges or connectivity but also the topography and dimensionality of the underlying scaling space. Here, we focus on conceptual issues with simulated fMRI data and provide an illustrative application using an empirical multi-region timeseries. © 2014.
+ER  - 
+TY  - JOUR
+T1  - Generalised filtering
+A1  - Friston, Karl
+A1  - Stephan, Klaas
+A1  - Li, Baojuan
+A1  - Daunizeau, Jean
+Y1  - 2010///
+JF  - Mathematical Problems in Engineering
+VL  - 2010
+DO  - 10.1155/2010/621670
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Friston et al/Mathematical Problems in Engineering/Friston et al. - 2010 - Generalised filtering.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;NO&gt;
+Laplace approximation
+No mean field assumption means no independent assumption between system states, parameters, and hyperparameters
+Online and real time deconvolution
+Absorb originally time invariant parameters and hyperparameters in to the system states
+Put low motion prior on parameters and hyperparameters, their mariginal distributions coverge slowly
+variational filtering and DEM outperform extended Kalman filtering and Particle filtering (provided posterior is unimodal)
+&lt;/NO&gt;
+N2  - We describe a Bayesian filtering scheme for nonlinear state-space models in continuous time. This scheme is called Generalised Filtering and furnishes posterior (conditional) densities on hidden states and unknown parameters generating observed data. Crucially, the scheme operates online, assimilating data to optimize the conditional density on time-varying states and time-invariant parameters. In contrast to Kalman and Particle smoothing, Generalised Filtering does not require a backwards pass. In contrast to variational schemes, it does not assume conditional independence between the states and parameters. Generalised Filtering optimises the conditional density with respect to a free-energy bound on the model's log-evidence. This optimisation uses the generalised motion of hidden states and parameters, under the prior assumption that the motion of the parameters is small. We describe the scheme, present comparative evaluations with a fixed-form variational version, and conclude with an illustrative application to a nonlinear state-space model of brain imaging time-series.
+ER  - 
+TY  - JOUR
+T1  - Construct validation of a DCM for resting state fMRI
+A1  - Razi, Adeel
+A1  - Kahan, Joshua
+A1  - Rees, Geraint
+A1  - Friston, Karl J.
+Y1  - 2015///
+KW  - Bayesian
+KW  - Dynamic causal modelling
+KW  - Effective connectivity
+KW  - FMRI
+KW  - Functional connectivity
+KW  - Graph
+KW  - Network discovery
+KW  - Resting state
+PB  - The Authors
+JF  - NeuroImage
+VL  - 106
+SP  - 1
+EP  - 14
+SN  - 1053-8119
+DO  - 10.1016/j.neuroimage.2014.11.027
+UR  - http://dx.doi.org/10.1016/j.neuroimage.2014.11.027
+L1  - file:///Users/yuanwang/Documents/Mendeley Desktop/Razi et al/NeuroImage/Razi et al. - 2015 - Construct validation of a DCM for resting state fMRI.pdf
+N1  - &lt;SG&gt;DCM Inference&lt;/SG&gt;
+&lt;RA&gt;high&lt;/RA&gt;
+&lt;NO&gt;
+Compare two kinds of DCM for rsfMRI: generalised filtering and spDCM
+SpDCM is more accurate and more sensitive to group differences
+&lt;/NO&gt;
+N2  - Recently, there has been a lot of interest in characterising the connectivity of resting state brain networks. Most of the literature uses functional connectivity to examine these intrinsic brain networks. Functional connectivity has well documented limitations because of its inherent inability to identify causal interactions. Dynamic causal modelling (DCM) is a framework that allows for the identification of the causal (directed) connections among neuronal systems - known as effective connectivity. This technical note addresses the validity of a recently proposed DCM for resting state fMRI - as measured in terms of their complex cross spectral density - referred to as spectral DCM. Spectral DCM differs from (the alternative) stochastic DCM by parameterising neuronal fluctuations using scale free (i.e., power law) forms, rendering the stochastic model of neuronal activity deterministic. Spectral DCM not only furnishes an efficient estimation of model parameters but also enables the detection of group differences in effective connectivity, the form and amplitude of the neuronal fluctuations or both. We compare and contrast spectral and stochastic DCM models with endogenous fluctuations or state noise on hidden states. We used simulated data to first establish the face validity of both schemes and show that they can recover the model (and its parameters) that generated the data. We then used Monte Carlo simulations to assess the accuracy of both schemes in terms of their root mean square error. We also simulated group differences and compared the ability of spectral and stochastic DCMs to identify these differences. We show that spectral DCM was not only more accurate but also more sensitive to group differences. Finally, we performed a comparative evaluation using real resting state fMRI data (from an open access resource) to study the functional integration within default mode network using spectral and stochastic DCMs.
+ER  - 
